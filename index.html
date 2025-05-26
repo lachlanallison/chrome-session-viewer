@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Session Dump Web - Extract and View Chrome Tabs</title>
+    <meta name="description" content="A modern web application that processes Google Chrome session files client-side to extract and display all tabs. View URLs, titles, history, and export data securely in your browser.">
+    <meta name="keywords" content="Chrome, session, tabs, browser, extract, dump, recovery, web app">
+    <meta name="author" content="Chrome Session Dump Web">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chrome-session-dump.web.app/">
+    <meta property="og:title" content="Chrome Session Dump Web - Extract and View Chrome Tabs">
+    <meta property="og:description" content="A modern web application that processes Google Chrome session files client-side to extract and display all tabs. View URLs, titles, history, and export data securely in your browser.">
+    <meta property="og:image" content="https://chrome-session-dump.web.app/screenshot.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chrome-session-dump.web.app/">
+    <meta property="twitter:title" content="Chrome Session Dump Web - Extract and View Chrome Tabs">
+    <meta property="twitter:description" content="A modern web application that processes Google Chrome session files client-side to extract and display all tabs. View URLs, titles, history, and export data securely in your browser.">
+    <meta property="twitter:image" content="https://chrome-session-dump.web.app/screenshot.png">
+    
+    <!-- Pinterest -->
+    <meta name="pinterest-rich-pin" content="true">
+    <meta property="article:author" content="Chrome Session Dump Web">
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://chrome-session-dump.web.app/">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#4285f4">
+    <meta name="theme-color" content="#4285f4">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <i class="fab fa-chrome"></i>
+                <h1>Chrome Session Dump</h1>
+                <p>Extract and view tabs from Chrome session files</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drop your Chrome session file here</h3>
+                        <p>or click to browse</p>
+                        <input type="file" id="fileInput" hidden>
+                        <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                            <i class="fas fa-folder-open"></i>
+                            Browse File
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="file-info" id="fileInfo" style="display: none;">
+                    <div class="file-details">
+                        <i class="fas fa-file"></i>
+                        <div>
+                            <span class="file-name" id="fileName"></span>
+                            <span class="file-size" id="fileSize"></span>
+                        </div>
+                        <button class="remove-file" id="removeFile">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls" id="controls" style="display: none;">
+                <div class="control-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showDeleted">
+                        <span class="checkmark"></span>
+                        Show deleted tabs
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showHistory">
+                        <span class="checkmark"></span>
+                        Show tab history
+                    </label>
+                </div>
+                
+                <div class="export-buttons">
+                    <button class="btn btn-secondary" id="exportJson">
+                        <i class="fas fa-download"></i>
+                        Export JSON
+                    </button>
+                    <button class="btn btn-secondary" id="exportCsv">
+                        <i class="fas fa-file-csv"></i>
+                        Export CSV
+                    </button>
+                </div>
+            </div>
+
+            <div class="results" id="results" style="display: none;">
+                <div class="results-header">
+                    <h2>Session Data</h2>
+                    <div class="stats" id="stats"></div>
+                </div>
+                
+                <div class="windows-container" id="windowsContainer">
+                    <!-- Windows and tabs will be populated here -->
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="errorText"></span>
+            </div>
+        </main>
+    </div>
+
+    <script src="session-parser.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 

@@ -1,4 +1,4 @@
-# Chrome Session Dump Web
+# Chrome Session Viewer
 
 A modern web application that processes Google Chrome session files client-side to extract and display all tabs that are/were open. This tool provides a beautiful, user-friendly interface to analyze Chrome session data without requiring any server-side processing.
 
@@ -94,7 +94,16 @@ The parser handles these Chrome session commands:
 ## Files Structure
 
 ```
+├── assets/             # Images and favicons
+│   ├── favicon.ico
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── apple-touch-icon.png
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-512x512.png
+│   └── Screenshot.png
 ├── index.html          # Main HTML interface
+├── site.webmanifest    # PWA manifest
 ├── styles.css          # Modern CSS styling
 ├── session-parser.js   # Core session file parser
 ├── app.js             # Application logic and UI handling

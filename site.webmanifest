@@ -1,1 +1,22 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+    "name": "Chrome Session Viewer",
+    "short_name": "Session Viewer",
+    "description": "Extract and view tabs from Chrome session files",
+    "icons": [
+        {
+            "src": "assets/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#4285f4",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "./",
+    "scope": "./"
+}

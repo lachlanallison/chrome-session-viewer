@@ -1,4 +1,4 @@
-// Main application logic for Chrome Session Dump Web
+// Main application logic for Chrome Session Viewer
 
 class ChromeSessionDumpApp {
     constructor() {
@@ -454,6 +454,6 @@ class ChromeSessionDumpApp {
 
 // Initialize the application when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, initializing Chrome Session Dump App');
+            console.log('DOM loaded, initializing Chrome Session Viewer App');
     new ChromeSessionDumpApp();
 }); 

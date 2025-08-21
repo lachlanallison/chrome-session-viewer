@@ -554,17 +554,18 @@ body {
 }
 
 .footer {
-    background: white;
-    border-top: 1px solid #e1e8ed;
-    margin-top: 40px;
-    padding: 20px 0;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 20px;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e8ed;
     text-align: center;
+    padding: 20px;
 }
 
 .footer-content p {

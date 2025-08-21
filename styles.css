@@ -553,6 +553,38 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+.footer {
+    background: white;
+    border-top: 1px solid #e1e8ed;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-content a {
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #3367d6;
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 10px;

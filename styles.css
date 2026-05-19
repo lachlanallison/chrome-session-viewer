@@ -566,6 +566,10 @@ body {
     border: 1px solid #e1e8ed;
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
 .footer-content p {
@@ -574,17 +578,7 @@ body {
     margin: 0;
 }
 
-.footer-content a {
-    color: #4285f4;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
 
-.footer-content a:hover {
-    color: #3367d6;
-    text-decoration: underline;
-}
 
 @media (max-width: 768px) {
     .container {

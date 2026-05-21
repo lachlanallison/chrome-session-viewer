@@ -1,0 +1,18 @@
+# Chrome Session Viewer
+# https://lachlanallison.github.io/chrome-session-viewer/
+
+> Web app that parses Google Chrome session files entirely in the browser. Extract and view tabs, groups, and history; export data. No uploads — session files never leave your device.
+
+## App
+- /
+
+## Features
+- Drop or browse for Chrome session files
+- View URLs, titles, tab groups, and history
+- Export extracted tab data
+- Client-side processing only
+
+## About
+- Built by Lachlan Allison: https://lachlanallison.com/
+- Source: https://github.com/lachlanallison/chrome-session-viewer
+- Listed on: https://localhtmltools.lachlanallison.com/tool/chrome-session-viewer/
